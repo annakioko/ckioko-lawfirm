@@ -1,10 +1,10 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function HomePage() {
   return (
-    <div className="flex justify-center space-x-4">
+    <div className="flex mt-28">
       <div className="ml-9 ">
         <p className="font-bold text-2xl mb-3">
           We are Your Trusted Legal Partners for all your legal needs
@@ -17,12 +17,14 @@ export default function HomePage() {
           rights.
         </p>
 
-        <button
-          className="bg-white shadow-md py-4 px-4 rounded-xl border border-solid border-amber-400 text-center
-        mt-9"
-        >
-          Book a consultation with us Today!
-        </button>
+        <Link to="/Booking">
+          <button
+            className="bg-white shadow-md py-4 px-4 rounded-xl border border-solid border-amber-400 text-center
+        mt-9 hover:bg-amber-400"
+          >
+            Book An Appointment Today!
+          </button>
+        </Link>
       </div>
       <div>
         <img src="" alt="Home page" className="w-full h-auto rounded-xl" />

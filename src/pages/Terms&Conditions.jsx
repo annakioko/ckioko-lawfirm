@@ -1,9 +1,13 @@
 import React from "react";
-//import { link } from "react-router-dom";
+import Termscard from "../components/TermsCard";
+
+
 
 export default function TermsConditions() {
   return (
-    <div className="mx-3">
+    <div className="mx-3 mt-20">
+      <Termscard/>
+      
       <h1 className="font-bold text-3xl my-5 flex justify-center">
         Terms and Conditions
       </h1>

@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
+import Termscard from '../components/TermsCard'
 
-export const AboutUs = () => {
-    return (
-        <div></div>
-    )
+export default function AboutUs() {
+  return (
+    <div className='mt-28'>AboutUs
+      <Termscard />
+      <div>
+
+      </div>
+    </div>
+  )
 }

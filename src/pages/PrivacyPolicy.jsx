@@ -1,10 +1,14 @@
 import React from "react";
+import Termscard from "../components/TermsCard";
 //import { link } from "react-router-dom";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="mx-3">
-      <h1 className="font-bold text-3xl my-5 flex justify-center ">Privacy Policy</h1>
+    <div className="mx-3 mt-20">
+      <Termscard />
+      <h1 className="font-bold text-3xl my-5 flex justify-center ">
+        Privacy Policy
+      </h1>
       <p>
         Christine Kioko Advocates makes no warranties, representations,
         undertakings, statements, or guarantees with regard to the Christine
