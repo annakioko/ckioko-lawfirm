@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import homeimage from "../assets/homeimage.jpg";
 
 
 export default function HomePage() {
   return (
     <div className="flex mt-28">
-      <div className="ml-9 ">
+      <div className="ml-9 mr-8 ">
         <p className="font-bold text-2xl mb-3">
           We are Your Trusted Legal Partners for all your legal needs
         </p>
@@ -20,14 +21,14 @@ export default function HomePage() {
         <Link to="/Booking">
           <button
             className="bg-white shadow-md py-4 px-4 rounded-xl border border-solid border-amber-400 text-center
-        mt-9 hover:bg-amber-400"
+        mt-9 hover:bg-amber-400 items-center"
           >
             Book An Appointment Today!
           </button>
         </Link>
       </div>
-      <div>
-        <img src="" alt="Home page" className="w-full h-auto rounded-xl" />
+      <div className="w-[100%] ml-auto  pr-4">
+        <img src={homeimage} alt="Home page" className="w-full h-80 object-cover" />
       </div>
     </div>
   );
