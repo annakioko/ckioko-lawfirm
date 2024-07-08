@@ -9,7 +9,7 @@ export default function Navbar() {
         <div>
           <img src={logo} alt="logo" className="h-10 w-auto" />
         </div>
-        <div className="flex space-x-6">
+        <div className="flex space-x-9">
           <Link to="/homepage" className="hover:underline hover:scale-110">
             Home
           </Link>
