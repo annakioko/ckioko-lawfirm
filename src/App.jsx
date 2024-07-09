@@ -12,12 +12,14 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsConditions from './pages/Terms&Conditions'
 import Termscard from './components/TermsCard'
 import HomePage from './pages/HomePage'
+import Header from './components/Header'
 
 
 export default function App() { 
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+        <Header/>
         <Navbar />
         <div className="flex-grow">
           <Routes>
