@@ -10,22 +10,24 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ onHeaderVisibilityChange }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setIsVisible(currentScrollPos < 50);
+      const visible = currentScrollPos < 50;
+      setIsVisible(visible);
+      onHeaderVisibilityChange(visible); // Notify parent component about visibility change
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [onHeaderVisibilityChange]);
 
   return (
     <div
-      className={`bg-zinc-900 text-slate-300 p-2 fixed top-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-zinc-900 bg-opacity-80 text-slate-300 p-2 fixed top-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >
@@ -76,7 +78,7 @@ const Header = () => {
           <a
             href="https://wa.me/254714681490"
             aria-label="WhatsApp"
-            className="flex items-center bg-amber-500 text-black px-3 py-1 "
+            className="flex items-center bg-amber-500 text-black px-3 py-4 "
           >
             <FaWhatsapp className="mr-2" />
             Get a free consultation

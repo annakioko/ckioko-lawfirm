@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-export default function Navbar() {
+const Navbar = ({ isHeaderVisible }) => {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.pageYOffset > 50); // Change to desired scroll threshold
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="bg-zinc-900 text-white fixed top-0 left-0 right-0 shadow-md">
-      <div className="flex justify-between items-center px-6 py-8">
+    <div
+      className={`w-full transition-all duration-300 z-40 ${
+        isScrolling || !isHeaderVisible
+          ? "bg-zinc-900  text-slate-200 fixed top-0 shadow-md"
+          : "bg-transparent text-slate-200 absolute top-[56px]"
+      }`}
+    >
+      <div className="flex justify-between items-center px-6 py-4">
         <div>
           <img src={logo} alt="logo" className="h-10 w-auto" />
         </div>
@@ -16,11 +33,9 @@ export default function Navbar() {
           <Link to="/aboutus" className="hover:underline hover:scale-110">
             About Us
           </Link>
-
           <Link to="/services" className="hover:underline hover:scale-110">
             Our Services
           </Link>
-
           <Link to="/contact" className="hover:underline hover:scale-110">
             Contact Us
           </Link>
@@ -31,4 +46,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
