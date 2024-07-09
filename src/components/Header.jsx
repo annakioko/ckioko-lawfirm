@@ -27,7 +27,7 @@ const Header = ({ onHeaderVisibilityChange }) => {
 
   return (
     <div
-      className={`bg-zinc-900 bg-opacity-80 text-slate-300 p-2 fixed top-0 w-full z-50 transition-transform duration-300 ${
+      className={`bg-zinc-900 bg-opacity-90 text-slate-300 p-2 fixed top-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
       }`}
     >

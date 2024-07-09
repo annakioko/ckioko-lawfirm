@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { FaEye, FaBullseye } from "react-icons/fa";
 
 const HomePage = () => {
   return (
@@ -102,6 +103,119 @@ const HomePage = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section
+        className="py-20 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/src/assets/gavel.jpg')",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div
+              className="bg-cover bg-center p-8 text-slate-200 opacity-80"
+              style={{
+                backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                backgroundBlendMode: "overlay",
+              }}
+            >
+              <FaEye className="text-4xl mb-4 items-center" />
+              <h3 className="text-xl font-bold mb-4">Our Vision</h3>
+              <p>
+                Our vision is to be the leading law firm in Kenya, recognized
+                for our commitment to excellence, integrity, and client
+                satisfaction.
+              </p>
+            </div>
+            <div
+              className="bg-cover bg-center p-8 text-slate-200 opacity-80"
+              style={{
+                backgroundImage: "url('/src/assets/mission.jpg')",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                backgroundBlendMode: "overlay",
+              }}
+            >
+              <FaBullseye className="text-4xl mb-4 items-center" />
+              <h3 className="text-xl font-bold mb-4">Our Mission</h3>
+              <p>
+                Our mission is to provide top-notch legal services that meet the
+                unique needs of our clients, ensuring justice and legal
+                protection for all.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+            <div className="text-slate-200 p-8 tracking-wide">
+              <h2 className="text-5xl font-bold mb-4">About Christine Kioko</h2>
+              <p className="mb-6 text-xl ">
+                Christine Kioko is the founding member of Christine Kioko
+                Advocates. With years of experience in various fields of law,
+                Christine has a passion for justice and a commitment to
+                providing the best legal solutions for her clients. Her
+                dedication and expertise have made her a respected figure in the
+                legal community.
+              </p>
+            </div>
+            <div>
+              <img
+                src="/src/assets/lawman.jpg"
+                alt="Founding Partners"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/*contact section*/}
+      <section
+        className="py-16 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold text-slate-800 mb-3 mr-2">
+            GET A FREE CONSULTATION!
+          </h1>
+          <p className="mb-5 text-slate-700 mr-2">
+            Contact us today to schedule a free consultation with one of our
+            lawyers
+          </p>
+          <form className="ml-3 mr-6">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full p-3 mb-4 border border-zinc-900 rounded-xl"
+            />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="w-full p-3 mb-4 border border-zinc-900 rounded-xl "
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full  p-3 mb-6 border border-zinc-900 rounded-xl "
+            />
+            <input
+              type="message"
+              placeholder="Message"
+              rows='10'
+              className="w-full p-6 mb-4 border border-zinc-900 rounded-xl "
+            />
+            <button className="inline-flex items-center bg-amber-500 text-black px-4 py-2 text-lg font-semibold hover:bg-amber-600">
+              Submit
+            </button>
+          </form>
         </div>
       </section>
     </div>
