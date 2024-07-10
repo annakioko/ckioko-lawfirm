@@ -29,7 +29,7 @@ const Header = ({ onHeaderVisibilityChange }) => {
     <div
       className={`bg-zinc-900 bg-opacity-90 text-slate-300 p-2 fixed top-0 w-full z-50 transition-transform duration-300 ${
         isVisible ? "transform translate-y-0" : "transform -translate-y-full"
-      }`}
+      } hidden md:flex`}
     >
       <div className="container mx-auto flex justify-between items-center text-sm">
         <div className="flex space-x-4">
@@ -78,7 +78,7 @@ const Header = ({ onHeaderVisibilityChange }) => {
           <a
             href="https://wa.me/254714681490"
             aria-label="WhatsApp"
-            className="flex items-center bg-amber-500 text-black px-3 py-4 "
+            className="flex items-center bg-amber-500 text-black px-3 py-2  hover:bg-amber-600"
           >
             <FaWhatsapp className="mr-2" />
             Get a free consultation

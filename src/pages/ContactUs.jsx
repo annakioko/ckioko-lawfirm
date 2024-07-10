@@ -1,94 +1,107 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import map from "../assets/map.jpg";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-export default function ContactUs() {
+const ContactPage = () => {
   return (
-    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-28 mx-4 h-80">
-      {/* Left Half: Map Section */}
-      <div className="flex-1 bg-gray-200 h-80">
-        <img src={map} alt="map" className="w-full h-full object-cover" />
-      </div>
-
-      {/* Right Half: Form */}
-      <form className="flex-1 border-l border-r border-solid border-black mx-4 h-full p-4">
-        <h3 className="text-center font-bold my-2 text-2xl">Contact us Via;</h3>
-        <p className="font-bold my-2 ml-3">+254 714 681 490</p>
-
-        {/* Name and Email Section */}
-        <div className="flex space-x-4 mx-3">
-          <div className="w-1/2">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="mt-1 block w-full px-3 py-2 border border-black shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter your name"
-            />
-          </div>
-          <div className="w-1/2">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="mt-1 block w-full px-3 py-2 border border-black shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter your email"
-            />
-          </div>
-        </div>
-
-        {/* Phone and Subject Section */}
-        <div className="flex space-x-4 mt-4 mx-3">
-          <div className="w-1/2">
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              className="mt-1 block w-full px-3 py-2 border border-black shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter your phone number"
-            />
-          </div>
-          <div className="w-1/2">
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              className="mt-1 block w-full px-3 py-2 border border-black shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              placeholder="Enter subject"
-            />
-          </div>
-        </div>
-
-        {/* Message Section */}
-        <div className="mt-4 mx-3">
-          <textarea
-            id="message"
-            name="message"
-            rows={4}
-            className="mt-1 block w-full px-3 py-2 border border-black shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            placeholder="Enter your message"
-          />
-        </div>
-
-        {/* Submit and Book Us Buttons */}
-        <div className="flex mt-4 mx-3 mb-2 justify-between items-center">
-          <button
-            type="submit"
-            className="bg-white shadow-md py-2 px-4 border border-solid border-amber-400 text-center hover:bg-amber-400"
-          >
-            Submit
+    <div className="bg-zinc-900">
+      {/* Hero Section */}
+      <section
+        className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed opacity-90"
+        style={{
+          backgroundImage: "url('/src/assets/mission.jpg')",
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="text-center p-8 max-w-3xl mx-auto">
+          <h1 className="text-6xl mb-4  text-slate-300">
+            For a quick response via WhatsApp, click here
+          </h1>
+          <button className="bg-amber-400 text-black py-4 px-4 my-4">
+            Click Here
           </button>
-          <p>or</p>
-          <Link to="/booking">
-            <button
-              type="button"
-              className="bg-white shadow-md py-2 px-4 border border-solid border-amber-400 text-center hover:bg-amber-400"
-            >
-              Book Us
-            </button>
-          </Link>
+          <p className="text-2xl my-6 text-slate-200">
+            You can also reach us through the following means below:
+          </p>
         </div>
-      </form>
+      </section>
+      {/* Contact Means Section */}{" "}
+      <section className="py-32 bg-zinc-900 text-slate-200">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row justify-around items-center space-y-12 lg:space-y-0">
+            <div className="flex items-center flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
+              <FaPhone className="text-4xl lg:text-xl text-amber-400 mb-4 lg:mb-0" />
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl lg:text-2xl font-bold">Phone</h3>
+                <p className="text-xl lg:text-lg">(+254) 714-681-490</p>
+              </div>
+            </div>
+            <div className="flex items-center flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
+              <FaEnvelope className="text-4xl lg:text-xl text-amber-400 mb-4 lg:mb-0" />
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl lg:text-2xl font-bold">Email</h3>
+                <p className="text-xl lg:text-lg">christinekioko@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex items-center flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">
+              <FaMapMarkerAlt className="text-4xl lg:text-xl text-amber-400 mb-4 lg:mb-0" />
+              <div className="text-center lg:text-left">
+                <h3 className="text-3xl lg:text-2xl font-bold">Location</h3>
+                <p className="text-xl lg:text-lg">
+                  View Park Towers, 10th Floor
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Contact Form Section */}
+      <section
+        className="py-16 bg-cover bg-center "
+        style={{
+          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backgroundBlendMode: "overlay",
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className=" p-8 max-w-3xl mx-auto ">
+            <h2 className="text-xl font-bold mb-9 text-zinc-900">
+              You can also fill in your details in the form below, we will be in
+              touch with you shortly
+            </h2>
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full p-3 rounded bg-zinc-100 border border-black"
+              />
+              <input
+                type="tel"
+                placeholder="Phone"
+                className="w-full p-3 rounded bg-zinc-100 border border-black"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-3 rounded bg-zinc-100 border border-black"
+              />
+              <textarea
+                placeholder="Message"
+                className="w-full p-3 rounded bg-zinc-100 border border-black"
+                rows="5"
+              ></textarea>
+              <button className="w-full py-3 bg-amber-400 text-slate-800 rounded-full">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default ContactPage;
