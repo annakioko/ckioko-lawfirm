@@ -15,11 +15,15 @@ const ContactPage = () => {
       >
         <div className="text-center p-8 max-w-3xl mx-auto">
           <h1 className="text-6xl mb-4  text-slate-300">
-            For a quick response via WhatsApp, click here
+            For a quick response via WhatsApp
           </h1>
-          <button className="bg-amber-400 text-black py-4 px-4 my-4">
-            Click Here
-          </button>
+          <a
+            href="https://wa.me/254714681490"
+            aria-label="WhatsApp"
+            className="mt-4 inline-block bg-amber-500 text-black px-6 py-3 text-lg rounded font-semibold hover:bg-amber-600"
+          >
+            Click here!
+          </a>
           <p className="text-2xl my-6 text-slate-200">
             You can also reach us through the following means below:
           </p>
@@ -55,8 +59,6 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
-
       {/* Contact Form Section */}
       <section
         className="py-16 bg-cover bg-center "
@@ -76,24 +78,24 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full p-3 rounded bg-zinc-100 border border-black"
+                className="w-full p-3  bg-zinc-100 border border-black rounded"
               />
               <input
                 type="tel"
                 placeholder="Phone"
-                className="w-full p-3 rounded bg-zinc-100 border border-black"
+                className="w-full p-3  bg-zinc-100 border border-black rounded"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full p-3 rounded bg-zinc-100 border border-black"
+                className="w-full p-3 bg-zinc-100 border border-black rounded"
               />
               <textarea
                 placeholder="Message"
-                className="w-full p-3 rounded bg-zinc-100 border border-black"
+                className="w-full p-3  bg-zinc-100 border border-black rounded"
                 rows="5"
               ></textarea>
-              <button className="w-full py-3 bg-amber-400 text-slate-800 rounded-full">
+              <button className="w-full py-3 bg-amber-400 text-slate-800 rounded">
                 Submit
               </button>
             </form>

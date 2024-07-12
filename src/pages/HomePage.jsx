@@ -1,6 +1,5 @@
 import React from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaEye, FaBullseye } from "react-icons/fa";
+import { FaWhatsapp, FaEye, FaBullseye } from "react-icons/fa";
 
 const HomePage = () => {
   return (
@@ -21,15 +20,16 @@ const HomePage = () => {
           <h1 className="text-slate-200 text-6xl mb-4">
             CHRISTINE KIOKO ADVOCATES
           </h1>
-          <p className="text-lg mb-6 text-slate-200">
+          <p className="text-xl mb-6 text-slate-200">
             We provide personalized legal solutions tailored to your unique
             situation. Our dedicated team of professionals is committed to
             achieving the best possible outcome for your case. We are here to
             help you navigate the legal system and protect your rights.
           </p>
           <a
-            href="#contact"
-            className="mt-4 inline-block bg-amber-500 text-black px-6 py-3 text-lg font-semibold hover:bg-amber-600"
+            href="https://wa.me/254714681490"
+            aria-label="WhatsApp"
+            className="mt-4 inline-block  bg-amber-500 text-black px-6 py-3 text-xl rounded font-semibold hover:bg-amber-600"
           >
             Contact Us
           </a>
@@ -95,10 +95,9 @@ const HomePage = () => {
                 <p className="mb-6">{service.description}</p>
                 <a
                   href="https://wa.me/254714681490"
-                  className="inline-flex items-center bg-amber-500 text-black px-4 py-2 text-lg font-semibold hover:bg-amber-600"
+                  className="inline-flex items-center bg-transparent text-amber-400 px-4 py-2 text-lg font-semibold hover:bg-amber-400 hover:text-black"
                 >
-                  <FaWhatsapp className="mr-2" />
-                  Get Free Consultation
+                  Get Consultation Today!
                 </a>
               </div>
             ))}
@@ -173,7 +172,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/*contact section*/}
+      {/* Contact Section */}
       <section
         className="py-16 bg-cover bg-center bg-fixed"
         style={{
@@ -182,7 +181,7 @@ const HomePage = () => {
           backgroundBlendMode: "overlay",
         }}
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-slate-800 mb-3 mr-2">
             GET A FREE CONSULTATION!
           </h1>
@@ -194,26 +193,28 @@ const HomePage = () => {
             <input
               type="text"
               placeholder="Name"
-              className="w-full p-3 mb-4 border border-zinc-900 rounded-xl"
+              className="w-full p-3 mb-4 border border-zinc-900 rounded"
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="w-full p-3 mb-4 border border-zinc-900 rounded-xl "
+              className="w-full p-3 mb-4 border border-zinc-900 rounded "
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full  p-3 mb-6 border border-zinc-900 rounded-xl "
+              className="w-full  p-3 mb-6 border border-zinc-900 rounded"
             />
-            <input
-              type="message"
+            <textarea
               placeholder="Message"
-              rows='10'
-              className="w-full p-6 mb-4 border border-zinc-900 rounded-xl "
-            />
-            <button className="inline-flex items-center bg-amber-500 text-black px-4 py-2 text-lg font-semibold hover:bg-amber-600">
-              Submit
+              className="w-full p-3 mb-6 border border-zinc-900 rounded"
+              rows="5"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-amber-500 text-black px-6 py-3 text-lg font-semibold hover:bg-amber-600 rounded"
+            >
+              Send Message
             </button>
           </form>
         </div>

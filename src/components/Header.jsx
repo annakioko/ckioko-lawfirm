@@ -78,7 +78,7 @@ const Header = ({ onHeaderVisibilityChange }) => {
           <a
             href="https://wa.me/254714681490"
             aria-label="WhatsApp"
-            className="flex items-center bg-amber-500 text-black px-3 py-2  hover:bg-amber-600"
+            className="flex items-center bg-amber-500 text-black px-3 py-2 rounded  hover:bg-amber-600"
           >
             <FaWhatsapp className="mr-2" />
             Get a free consultation

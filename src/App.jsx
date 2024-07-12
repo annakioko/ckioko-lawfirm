@@ -13,6 +13,13 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Booking from "./pages/Booking";
 import HomePage from "./pages/HomePage";
+import Familylaw from "./pages/Familylaw";
+import Digitalassests from "./pages/Digitalassests";
+import Environmentlaw from "./pages/Environmentlaw";
+import Labourlaw from "./pages/Labourlaw";
+import Realestatelaw from "./pages/Realestatelaw";
+import Copratelaw from "./pages/Copratelaw";
+import ChatBox from "./components/ChatBox";
 
 export default function App() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -30,10 +37,16 @@ export default function App() {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/booking" element={<Booking />} />
-
+            <Route path="/familylaw" element={<Familylaw />} />
+            <Route path="/digitalassests" element={<Digitalassests />} />
+            <Route path="/copratelaw" element={<Copratelaw />} />
+            <Route path="/environmentlaw" element={<Environmentlaw />} />
+            <Route path="/labourlaw" element={<Labourlaw />} />
+            <Route path="/realestatelaw" element={<Realestatelaw />} />
           </Routes>
         </div>
         <Footer />
+        <ChatBox />
       </div>
     </Router>
   );
