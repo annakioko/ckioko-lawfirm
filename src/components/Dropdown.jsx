@@ -31,7 +31,7 @@ const DropdownMenu = ({ isMenuOpen, toggleDropdown }) => {
             className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
             onClick={toggleDropdown}
           >
-            Environmental and Land Use Law
+            Environment and Land Use Law
           </Link>
           <Link
             to="/realestatelaw"

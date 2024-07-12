@@ -28,37 +28,37 @@ export default function Familylaw() {
             <div>
               <Link
                 to="/copratelaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Corporate and Commercial Law
               </Link>
               <Link
-                to="/laborlaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/labourlaw"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Employment and Labor Law
               </Link>
               <Link
-                to="/services/environmentallaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/environmentlaw"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Environmental and Land Use Law
               </Link>
               <Link
                 to="/realestatelaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Real Estate and Property Law
               </Link>
               <Link
                 to="/familylaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Family Law
               </Link>
               <Link
-                to="/digitalassets"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/digitalassests"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Digital Assets and Cyber Law
               </Link>

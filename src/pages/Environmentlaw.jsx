@@ -28,39 +28,40 @@ export default function Environmentlaw() {
           <div className="lg:w-1/4 p-4">
             <h1 className="text-amber-600 mb-5 text-center">OUR SERVICES</h1>
             <div>
+              {" "}
               <Link
                 to="/copratelaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Corporate and Commercial Law
               </Link>
               <Link
-                to="/laborlaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/labourlaw"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Employment and Labor Law
               </Link>
               <Link
-                to="/services/environmentallaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/environmentlaw"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Environmental and Land Use Law
               </Link>
               <Link
                 to="/realestatelaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Real Estate and Property Law
               </Link>
               <Link
                 to="/familylaw"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Family Law
               </Link>
               <Link
-                to="/digitalassets"
-                className="block px-4 py-2 text-slate-700 hover:text-amber-600 underline transition-transform transform hover:translate-x-2"
+                to="/digitalassests"
+                className="block px-4 py-2 hover:bg-amber-400 hover:text-black"
               >
                 Digital Assets and Cyber Law
               </Link>
@@ -109,7 +110,7 @@ export default function Environmentlaw() {
                   What is Environment and Property Law?
                 </h3>
                 <p className="mb-4 text-slate-700">
-                  Environment and Property Law encompasses legal aspects related
+                  Environment and Land Use Law encompasses legal aspects related
                   to the protection of the environment and the use of land and
                   natural resources. This area of law covers a wide range of
                   issues including environmental regulations, land use planning,
@@ -123,7 +124,7 @@ export default function Environmentlaw() {
                 </h3>
                 <p className="mb-4 text-slate-700">
                   Our firm offers specialized legal services in Environment and
-                  Property Law. With extensive experience in handling
+                  Land Use Law. With extensive experience in handling
                   environmental compliance and property-related legal matters,
                   we provide clients with expert advice and representation. Our
                   team is dedicated to ensuring that your property use is
@@ -131,7 +132,7 @@ export default function Environmentlaw() {
                   regulations.
                 </p>
                 <h3 className="text-xl font-semibold mb-2 text-amber-600">
-                  Examples of Environment and Property Law Cases
+                  Examples of Environment and Land Use Law Cases
                 </h3>
                 <p className="text-slate-700">
                   We have successfully represented clients in various

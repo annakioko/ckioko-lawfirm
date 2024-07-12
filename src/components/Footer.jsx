@@ -14,11 +14,13 @@ export default function Footer() {
     <div className="text-slate-200 bg-zinc-900 p-7">
       <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
         {/* Logo Section */}
-        <div className=" items-start md:items-center">
+        <div className="items-start md:items-center">
           <img src={logo} alt="logo" className="h-10 w-auto mb-6" />
           <p>With years of experience in various fields of law,</p>
           <p>Christine has a passion for justice and a commitment</p>
-          <p className="mb-5">to providing the best legal solutions for her clients.</p>
+          <p className="mb-5">
+            to providing the best legal solutions for her clients.
+          </p>
           <div className="flex space-x-4 mt-6">
             <a
               href="https://linkedin.com"
@@ -50,8 +52,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
-        {/* About Us Section */}
+        {/* About Us Section
         <div className="flex flex-col space-y-2 text-center md:text-left">
           <Link to="/aboutus" className="hover:underline">
             About Us
@@ -59,34 +60,63 @@ export default function Footer() {
           <Link to="/services" className="hover:underline">
             Services
           </Link>
-
           <Link to="/downloadables" className="hover:underline">
             Downloadables
           </Link>
-        </div>
+        </div> */}
 
         {/* Policies Section */}
         <div className="flex flex-col space-y-2 text-center md:text-left">
-          <h3 className="font-bold">Policies</h3>
-          <Link to="/termsandconditions">
-            <button className="">Terms and Conditions</button>
-          </Link>
-          <Link to="/privacypolicy">
-            <button className="">Privacy Policy</button>
-          </Link>
-          <Link to="/disclaimer">
-            <button className="">Disclaimer</button>
-          </Link>
+          <h3 className="font-bold text-2xl mb-5">Contact Us</h3>
+          <p className="text-slate-200 mb-3">+254 720 856 222</p>
+          <p className="text-slate-200 mb-3">chrsitinekioko@gmail.com</p>
+          <p className="text-slate-200 ">View Park Towers 10th Floor</p>
         </div>
-
         {/* Contact Us Section */}
         <div className="flex flex-col space-y-2 text-center md:text-left">
-          <h3 className="font-bold">Contact Us</h3>
-          <p>+254 720 856 222</p>
-          <p>chrsitinekioko@gmail.com</p>
-          <p>View Park Towers 10th Floor</p>
-        </div>
-      </div>
+          <h1 className="text-white mb-5 text-center text-2xl">OUR SERVICES</h1>
+          <div>
+            <Link
+              to="/copratelaw"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Corporate and Commercial Law
+            </Link>
+            <Link
+              to="/labourlaw"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Employment and Labor Law
+            </Link>
+            <Link
+              to="/environmentlaw"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Environmental and Land Use Law
+            </Link>
+            <Link
+              to="/realestatelaw"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Real Estate and Property Law
+            </Link>
+            <Link
+              to="/familylaw"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Family Law
+            </Link>
+            <Link
+              to="/digitalassests"
+              className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
+            >
+              Digital Assets and Cyber Law
+            </Link>
+          </div>
+        </div>{" "}
+        {/* Add this closing div */}
+      </div>{" "}
+      {/* Add this closing div */}
     </div>
   );
 }
