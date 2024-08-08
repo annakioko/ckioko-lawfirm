@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaClock } from "react-icons/fa";
+import ladyOfJusticeImg from "../assets/ladyofjustice.jpg";
+import gavelImg from "../assets/gavel.jpg";
+import familyLawImg from "../assets/familylaw.jpg";
 
 export default function Familylaw() {
   return (
@@ -9,7 +12,7 @@ export default function Familylaw() {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJusticeImg})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
@@ -65,8 +68,8 @@ export default function Familylaw() {
             </div>
 
             <div
-              className="mt-8 p-4 bg-cover bg-center bg-fixed  rounded"
-              style={{ backgroundImage: "url('/src/assets/gavel.jpg')" }}
+              className="mt-8 p-4 bg-cover bg-center bg-fixed rounded"
+              style={{ backgroundImage: `url(${gavelImg})` }}
             >
               <h2 className="text-amber-600 mb-6">Let us help you!</h2>
               <p className="text-slate-200 mb-5">
@@ -93,7 +96,7 @@ export default function Familylaw() {
             <div
               className="bg-cover bg-center h-80 mb-6 rounded"
               style={{
-                backgroundImage: "url('/src/assets/familylaw.jpg')",
+                backgroundImage: `url(${familyLawImg})`,
               }}
             >
               {/* Card content */}

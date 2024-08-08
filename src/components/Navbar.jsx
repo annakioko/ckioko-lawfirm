@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
@@ -8,6 +8,7 @@ const Navbar = ({ isHeaderVisible }) => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,19 @@ const Navbar = ({ isHeaderVisible }) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -48,6 +62,7 @@ const Navbar = ({ isHeaderVisible }) => {
           <DropdownMenu
             isMenuOpen={isDropdownOpen}
             toggleDropdown={toggleDropdown}
+            dropdownRef={dropdownRef}
           />
           <Link to="/contact" className="hover:underline hover:scale-110">
             Contact Us
@@ -78,7 +93,7 @@ const Navbar = ({ isHeaderVisible }) => {
           >
             About Us
           </Link>
-          <div className="w-full">
+          <div className="w-full" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
               className="w-full text-left py-2 px-4 hover:underline flex justify-between items-center"
@@ -123,7 +138,6 @@ const Navbar = ({ isHeaderVisible }) => {
                 >
                   Family Law
                 </Link>
-            
                 <Link
                   to="/digitalassests"
                   className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"

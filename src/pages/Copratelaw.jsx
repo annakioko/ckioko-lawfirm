@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaClock } from "react-icons/fa";
+import ladyOfJusticeImage from "../assets/ladyofjustice.jpg";
+import gavelImage from "../assets/gavel.jpg";
+import contractDraftsImage from "../assets/contractdrafts.jpg";
 
 export default function Copratelaw() {
   return (
@@ -9,7 +12,7 @@ export default function Copratelaw() {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJusticeImage})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
@@ -67,8 +70,8 @@ export default function Copratelaw() {
             </div>
 
             <div
-              className="mt-8 p-4 bg-cover bg-center bg-fixed  rounded"
-              style={{ backgroundImage: "url('/src/assets/gavel.jpg')" }}
+              className="mt-8 p-4 bg-cover bg-center bg-fixed rounded"
+              style={{ backgroundImage: `url(${gavelImage})` }}
             >
               <h2 className="text-amber-600 mb-6">Let us help you!</h2>
               <p className="text-slate-200 mb-5">
@@ -95,7 +98,7 @@ export default function Copratelaw() {
             <div
               className="bg-cover bg-center h-80 mb-6 rounded"
               style={{
-                backgroundImage: "url('/src/assets/contractdrafts.jpg')",
+                backgroundImage: `url(${contractDraftsImage})`,
               }}
             >
               {/* Card content */}
@@ -105,7 +108,6 @@ export default function Copratelaw() {
                 Corporate and Commercial Law
               </h2>
               <div className="mt-4">
-                {" "}
                 <h3 className="text-xl font-semibold mb-2 text-amber-600">
                   What is Corporate and Commercial Law?
                 </h3>

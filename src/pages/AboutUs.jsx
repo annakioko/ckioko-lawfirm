@@ -1,5 +1,8 @@
 import React from "react";
 import { FaEye, FaBullseye } from "react-icons/fa";
+import ladyOfJustice from "../assets/ladyofjustice.jpg";
+import lawman from "../assets/lawman.jpg";
+import gavel from "../assets/gavel.jpg";
 
 const AboutUsPage = () => {
   return (
@@ -8,7 +11,7 @@ const AboutUsPage = () => {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJustice})`, // Use imported image
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
@@ -28,7 +31,7 @@ const AboutUsPage = () => {
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="flex items-center justify-center">
             <img
-              src="/src/assets/lawman.jpg"
+              src={lawman} // Use imported image
               alt="Founding Partner"
               className="w-full h-full object-cover "
             />
@@ -61,7 +64,7 @@ const AboutUsPage = () => {
       <section
         className="py-20 bg-cover bg-center bg-fixed opacity-80"
         style={{
-          backgroundImage: "url('/src/assets/gavel.jpg')",
+          backgroundImage: `url(${gavel})`, // Use imported image
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}

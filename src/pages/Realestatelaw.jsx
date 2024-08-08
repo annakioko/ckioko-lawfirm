@@ -1,6 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaClock } from "react-icons/fa";
+import ladyOfJusticeImage from "../assets/ladyofjustice.jpg"; // Adjust the path based on your file structure
+import gavelImage from "../assets/gavel.jpg"; // Adjust the path based on your file structure
+import realEstateImage from "../assets/realestate.jpg"; // Adjust the path based on your file structure
 
 export default function Realestatelaw() {
   return (
@@ -9,7 +12,7 @@ export default function Realestatelaw() {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJusticeImage})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
@@ -67,8 +70,8 @@ export default function Realestatelaw() {
             </div>
 
             <div
-              className="mt-8 p-4 bg-cover bg-center bg-fixed  rounded"
-              style={{ backgroundImage: "url('/src/assets/gavel.jpg')" }}
+              className="mt-8 p-4 bg-cover bg-center bg-fixed rounded"
+              style={{ backgroundImage: `url(${gavelImage})` }}
             >
               <h2 className="text-amber-600 mb-6">Let us help you!</h2>
               <p className="text-slate-200 mb-5">
@@ -95,7 +98,7 @@ export default function Realestatelaw() {
             <div
               className="bg-cover bg-center h-80 mb-6 rounded"
               style={{
-                backgroundImage: "url('/src/assets/realestate.jpg')",
+                backgroundImage: `url(${realEstateImage})`,
               }}
             >
               {/* Card content */}

@@ -1,5 +1,7 @@
 import React from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import missionImage from "../assets/mission.jpg";
+import ladyOfJusticeImage from "../assets/ladyofjustice.jpg";
 
 const ContactPage = () => {
   return (
@@ -8,13 +10,13 @@ const ContactPage = () => {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed opacity-90"
         style={{
-          backgroundImage: "url('/src/assets/mission.jpg')",
+          backgroundImage: `url(${missionImage})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
       >
         <div className="text-center p-8 max-w-3xl mx-auto">
-          <h1 className="text-6xl mb-4  text-slate-300">
+          <h1 className="text-6xl mb-4 text-slate-300">
             For a quick response via WhatsApp
           </h1>
           <a
@@ -29,7 +31,7 @@ const ContactPage = () => {
           </p>
         </div>
       </section>
-      {/* Contact Means Section */}{" "}
+      {/* Contact Means Section */}
       <section className="py-32 bg-zinc-900 text-slate-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row justify-around items-center space-y-12 lg:space-y-0">
@@ -61,15 +63,15 @@ const ContactPage = () => {
       </section>
       {/* Contact Form Section */}
       <section
-        className="py-16 bg-cover bg-center "
+        className="py-16 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJusticeImage})`,
           backgroundColor: "rgba(255, 255, 255, 0.8)",
           backgroundBlendMode: "overlay",
         }}
       >
         <div className="container mx-auto px-4">
-          <div className=" p-8 max-w-3xl mx-auto ">
+          <div className="p-8 max-w-3xl mx-auto">
             <h2 className="text-xl font-bold mb-9 text-zinc-900">
               You can also fill in your details in the form below, we will be in
               touch with you shortly
@@ -78,12 +80,12 @@ const ContactPage = () => {
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full p-3  bg-zinc-100 border border-black rounded"
+                className="w-full p-3 bg-zinc-100 border border-black rounded"
               />
               <input
                 type="tel"
                 placeholder="Phone"
-                className="w-full p-3  bg-zinc-100 border border-black rounded"
+                className="w-full p-3 bg-zinc-100 border border-black rounded"
               />
               <input
                 type="email"
@@ -92,7 +94,7 @@ const ContactPage = () => {
               />
               <textarea
                 placeholder="Message"
-                className="w-full p-3  bg-zinc-100 border border-black rounded"
+                className="w-full p-3 bg-zinc-100 border border-black rounded"
                 rows="5"
               ></textarea>
               <button className="w-full py-3 bg-amber-400 text-slate-800 rounded">

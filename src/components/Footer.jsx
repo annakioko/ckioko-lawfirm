@@ -1,15 +1,15 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
-import {
-  FaLinkedin,
-  FaFacebook,
-  FaYoutube,
-  FaInstagram,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
+import { FaLinkedin, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="text-slate-200 bg-zinc-900 p-7">
       <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
@@ -52,71 +52,64 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        {/* About Us Section
-        <div className="flex flex-col space-y-2 text-center md:text-left">
-          <Link to="/aboutus" className="hover:underline">
-            About Us
-          </Link>
-          <Link to="/services" className="hover:underline">
-            Services
-          </Link>
-          <Link to="/downloadables" className="hover:underline">
-            Downloadables
-          </Link>
-        </div> */}
 
-        {/* Policies Section */}
+        {/* Contact Us Section */}
         <div className="flex flex-col space-y-2 text-center md:text-left">
           <h3 className="font-bold text-2xl mb-5">Contact Us</h3>
           <p className="text-slate-200 mb-3">+254 720 856 222</p>
-          <p className="text-slate-200 mb-3">chrsitinekioko@gmail.com</p>
-          <p className="text-slate-200 ">View Park Towers 10th Floor</p>
+          <p className="text-slate-200 mb-3">christinekioko@gmail.com</p>
+          <p className="text-slate-200">View Park Towers 10th Floor</p>
         </div>
-        {/* Contact Us Section */}
+
+        {/* Services Section */}
         <div className="flex flex-col space-y-2 text-center md:text-left">
           <h1 className="text-white mb-5 text-center text-2xl">OUR SERVICES</h1>
           <div>
             <Link
-              to="/copratelaw"
+              to="/copratelaw#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Corporate and Commercial Law
             </Link>
             <Link
-              to="/labourlaw"
+              to="/labourlaw#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Employment and Labor Law
             </Link>
             <Link
-              to="/environmentlaw"
+              to="/environmentlaw#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Environmental and Land Use Law
             </Link>
             <Link
-              to="/realestatelaw"
+              to="/realestatelaw#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Real Estate and Property Law
             </Link>
             <Link
-              to="/familylaw"
+              to="/familylaw#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Family Law
             </Link>
             <Link
-              to="/digitalassests"
+              to="/digitalassests#top"
+              onClick={handleLinkClick}
               className="block px-4 py-2 text-slate-200 hover:text-amber-600 underline"
             >
               Digital Assets and Cyber Law
             </Link>
           </div>
-        </div>{" "}
-        {/* Add this closing div */}
-      </div>{" "}
-      {/* Add this closing div */}
+        </div>
+      </div>
     </div>
   );
 }

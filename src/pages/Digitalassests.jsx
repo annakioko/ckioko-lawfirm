@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaClock } from "react-icons/fa";
-
+import ladyOfJusticeImg from "../assets/ladyofjustice.jpg";
+import gavelImg from "../assets/gavel.jpg";
+import digitalAssetsImg from "../assets/digitalassests.jpg";
 
 export default function Digitalassests() {
   return (
@@ -10,14 +12,14 @@ export default function Digitalassests() {
       <section
         className="h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: "url('/src/assets/ladyofjustice.jpg')",
+          backgroundImage: `url(${ladyOfJusticeImg})`,
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           backgroundBlendMode: "overlay",
         }}
       >
         <div className="text-center p-8 max-w-3xl mx-auto tracking-wide">
           <h1 className="text-6xl font-bold mb-4 text-white">
-            DIGITAL ASSESTS AND CYBER LAW
+            DIGITAL ASSETS AND CYBER LAW
           </h1>
         </div>
       </section>
@@ -68,8 +70,8 @@ export default function Digitalassests() {
             </div>
 
             <div
-              className="mt-8 p-4 bg-cover bg-center bg-fixed  rounded"
-              style={{ backgroundImage: "url('/src/assets/gavel.jpg')" }}
+              className="mt-8 p-4 bg-cover bg-center bg-fixed rounded"
+              style={{ backgroundImage: `url(${gavelImg})` }}
             >
               <h2 className="text-amber-600 mb-6">Let us help you!</h2>
               <p className="text-slate-200 mb-5">
@@ -96,14 +98,14 @@ export default function Digitalassests() {
             <div
               className="bg-cover bg-center h-80 mb-6 rounded"
               style={{
-                backgroundImage: "url('/src/assets/digitalassests.jpg')",
+                backgroundImage: `url(${digitalAssetsImg})`,
               }}
             >
               {/* Card content */}
             </div>
             <div className="mt-4">
               <h2 className="text-2xl font-bold mb-2 text-amber-600">
-                Digital Assests and Cyber Law
+                Digital Assets and Cyber Law
               </h2>
               <div className="mt-4">
                 <h3 className="text-xl font-semibold mb-2 text-amber-600">
