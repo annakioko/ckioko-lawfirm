@@ -56,9 +56,13 @@ export default function Footer() {
         {/* Contact Us Section */}
         <div className="flex flex-col space-y-2 text-center md:text-left">
           <h3 className="font-bold text-2xl mb-5">Contact Us</h3>
-          <p className="text-slate-200 mb-3">+254 720 856 222</p>
+          <p className="text-slate-200 mb-3">+254 714 681 490</p>
           <p className="text-slate-200 mb-3">christinekioko@gmail.com</p>
-          <p className="text-slate-200">View Park Towers 10th Floor</p>
+          <p>PO-Box 455-00517, Nairobi</p>
+          <p className="text-slate-200">
+            Transcom Office Suites, 8th floor, View Park Towers, Utalii Lane
+          </p>
+
         </div>
 
         {/* Services Section */}

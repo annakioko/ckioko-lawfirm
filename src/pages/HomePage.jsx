@@ -47,7 +47,7 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-white">
+      <section id="services" className="py-16 bg-slate-200">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-center mb-4">Our Services</h2>
           <p className="text-center text-slate-600 mb-10">
@@ -93,7 +93,7 @@ const HomePage = () => {
                 image: environmentImage,
               },
             ].map((service, index) => (
-              <div key={index} className="bg-white text-slate-700 p-6">
+              <div key={index} className="bg-slate-200 text-slate-700 p-6">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -222,7 +222,7 @@ const HomePage = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-amber-500 text-white px-4 py-2 rounded"
+              className="bg-amber-500 text-slate-200 px-4 py-2 rounded"
             >
               Send Message
             </button>
@@ -231,12 +231,12 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-gray-800 text-white text-center">
+      <footer className="py-8 bg-zinc-900 text-slate-200 text-center">
         <div className="container mx-auto px-4">
           <p className="mb-2">
             © 2024 Christine Kioko Advocates. All rights reserved.
           </p>
-          <p>Website by Anna Kioko</p>
+          <p>Website by ANK Media</p>
         </div>
       </footer>
     </div>

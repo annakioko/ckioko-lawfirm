@@ -54,7 +54,8 @@ const ContactPage = () => {
               <div className="text-center lg:text-left">
                 <h3 className="text-3xl lg:text-2xl font-bold">Location</h3>
                 <p className="text-xl lg:text-lg">
-                  View Park Towers, 10th Floor
+                  Transcom Office Suites, 8th floor, View Park Towers, Utalii
+                  Lane
                 </p>
               </div>
             </div>
