@@ -54,7 +54,7 @@ const HomePage = () => {
             Christine Kioko Advocates is your one-stop shop for all your legal
             needs.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {[
               {
                 title: "Digital Assets and Cyber Law",
@@ -98,13 +98,15 @@ const HomePage = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-48 object-cover mb-4 filter grayscale"
+                  width="300"
+                  height="200"
                 />
                 <h3 className="text-xl mb-4 text-center text-slate-800">
                   {service.title}
                 </h3>
                 <p className="mb-6">{service.description}</p>
                 <a
-                  href="https://wa.me/254714681490"
+                  href="https://wa.me/+254714681490"
                   className="inline-flex items-center bg-transparent text-amber-400 px-4 py-2 text-lg font-semibold hover:bg-amber-400 hover:text-black"
                 >
                   Get Consultation Today!

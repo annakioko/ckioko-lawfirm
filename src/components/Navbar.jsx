@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 import DropdownMenu from "../components/Dropdown";
@@ -9,6 +9,7 @@ const Navbar = ({ isHeaderVisible }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +22,11 @@ const Navbar = ({ isHeaderVisible }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !event.target.closest(".dropdown-menu-button")
+      ) {
         setIsDropdownOpen(false);
       }
     };
@@ -31,6 +36,10 @@ const Navbar = ({ isHeaderVisible }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,11 +68,64 @@ const Navbar = ({ isHeaderVisible }) => {
           <Link to="/aboutus" className="hover:underline hover:scale-110">
             About Us
           </Link>
-          <DropdownMenu
-            isMenuOpen={isDropdownOpen}
-            toggleDropdown={toggleDropdown}
-            dropdownRef={dropdownRef}
-          />
+          <div className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="hover:underline flex justify-between items-center text-slate-200 dropdown-menu-button"
+            >
+              Our Services
+              {isDropdownOpen }
+            </button>
+            {isDropdownOpen && (
+              <div
+                className="absolute top-full left-0 bg-zinc-900 text-slate-200 w-full py-2 space-y-2"
+                ref={dropdownRef}
+              >
+                <Link
+                  to="/copratelaw"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Corporate and Commercial Law
+                </Link>
+                <Link
+                  to="/labourlaw"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Employment and Labor Law
+                </Link>
+                <Link
+                  to="/environmentlaw"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Environmental and Land Use Law
+                </Link>
+                <Link
+                  to="/realestatelaw"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Real Estate and Property Law
+                </Link>
+                <Link
+                  to="/familylaw"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Family Law
+                </Link>
+                <Link
+                  to="/digitalassests"
+                  className="block px-4 py-2 hover:bg-amber-400 hover:text-black underline"
+                  onClick={toggleMenu}
+                >
+                  Digital Assets and Cyber Law
+                </Link>
+              </div>
+            )}
+          </div>
           <Link to="/contact" className="hover:underline hover:scale-110">
             Contact Us
           </Link>
@@ -93,10 +155,10 @@ const Navbar = ({ isHeaderVisible }) => {
           >
             About Us
           </Link>
-          <div className="w-full" ref={dropdownRef}>
+          <div className="w-full">
             <button
               onClick={toggleDropdown}
-              className="w-full text-left py-2 px-4 hover:underline flex justify-between items-center"
+              className="w-full text-left py-2 px-4 hover:underline flex justify-between items-center dropdown-menu-button"
             >
               Our Services
               {isDropdownOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
